@@ -1,0 +1,145 @@
+index.html*
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />html
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kiran Store - Grocery</title>
+<style>
+  body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f4f4; }
+  header { background:#2c3e50; color:#fff; padding:20px; text-align:center; }
+  nav { background:#34495e; display:flex; justify-content:center; gap:20px; padding:10px 0; }
+  nav a { color:#fff; text-decoration:none; font-weight:bold; }
+  .logo-placeholder { width:150px; height:60px; background:#bdc3c7; margin: 0 auto 10px; display:flex; justify-content:center; align-items:center; font-weight:bold; color:#2c3e50; font-size:18px; }
+  .container { max-width:900px; margin:20px auto; padding:10px; background:#fff; }
+  h2 { color:#2c3e50; margin-bottom:10px; }
+  .products { display:flex; flex-wrap: wrap; gap:15px; }
+  .product { flex: 1 1 200px; background:#ecf0f1; padding:15px; border-radius:8px; }
+  .product h3 { margin-top:0; }
+  button { background:#27ae60; color:#fff; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; }
+  button:hover { background:#2ecc71; }
+  footer { text-align:center; padding:15px; background:#2c3e50; color:#fff; margin-top:20px; }
+  .contact { margin-top: 15px; text-align:center; }
+  .contact a { color:#27ae60; font-weight:bold; text-decoration:none; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-placeholder">Your Logo Here</div>
+  <h1>Kiran Store</h1>
+  <p>Your trusted grocery store</p>
+</header>
+
+<nav>
+  <a href="#vegetables">Vegetables</a>
+  <a href="#fruits">Fruits</a>
+  <a href="#dairy">Dairy</a>
+  <a href="#snacks">Snacks</a>
+  <a href="#beverages">Beverages</a>
+</nav>
+
+<div class="container">
+  <section id="vegetables">
+    <h2>Vegetables</h2>
+    <div class="products">
+      <div class="product">
+        <h3>Potato</h3>
+        <p>Fresh potatoes - 1kg</p>
+        <button onclick="order('Potato')">Order Now</button>
+      </div>
+      <div class="product">
+        <h3>Tomato</h3>
+        <p>Organic tomatoes - 1kg</p>
+        <button onclick="order('Tomato')">Order Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="fruits">
+    <h2>Fruits</h2>
+    <div class="products">
+      <div class="product">
+        <h3>Banana</h3>
+        <p>Fresh bananas - 1 dozen</p>
+        <button onclick="order('Banana')">Order Now</button>
+      </div>
+      <div class="product">
+        <h3>Apple</h3>
+        <p>Red apples - 1kg</p>
+        <button onclick="order('Apple')">Order Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="dairy">
+    <h2>Dairy</h2>
+    <div class="products">
+      <div class="product">
+        <h3>Milk</h3>
+        <p>Fresh cow milk - 1 litre</p>
+        <button onclick="order('Milk')">Order Now</button>
+      </div>
+      <div class="product">
+        <h3>Paneer</h3>
+        <p>Homemade paneer - 500g</p>
+        <button onclick="order('Paneer')">Order Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="snacks">
+    <h2>Snacks</h2>
+    <div class="products">
+      <div class="product">
+        <h3>Potato Chips</h3>
+        <p>Crunchy salted chips - 200g</p>
+        <button onclick="order('Potato Chips')">Order Now</button>
+      </div>
+      <div class="product">
+        <h3>Namkeen</h3>
+        <p>Spicy mix - 250g</p>
+        <button onclick="order('Namkeen')">Order Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="beverages">
+    <h2>Beverages</h2>
+    <div class="products">
+      <div class="product">
+        <h3>Tea</h3>
+        <p>Premium tea leaves - 100g</p>
+        <button onclick="order('Tea')">Order Now</button>
+      </div>
+      <div class="product">
+        <h3>Coffee</h3>
+        <p>Ground coffee - 100g</p>
+        <button onclick="order('Coffee')">Order Now</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="contact">
+    <h3>Contact Us</h3>
+    <p>Phone: <a href="tel:+919713609734">+91 97136 09734</a></p>
+    <p>WhatsApp: <a href="https://wa.me/919713609734" target="_blank">Chat on WhatsApp</a></p>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 Kiran Store. All rights reserved.
+</footer>
+
+<script>
+  function order(product) {
+    const message = `Hello! I want to order: product from Kiran Store. Please assist.`;
+    const whatsappUrl = `https://wa.me/919713609734?text={encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  }
+</script>
+
+</body>
+</html>
